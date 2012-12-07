@@ -39,6 +39,17 @@ $app->get('/fizzbuzz/:input+', function($input) use ($app) {
     echo json_encode( implode("\n", $result));
 });
 
+$app->get('/fizzbuzzarray/:input+', function($input) use ($app) {
+    $range = explode(',', $input[0]);
+    $result = fizzbuzz($range[0], $range[1]);
+
+    $response = $app->response();
+    $response['Content-Type'] = 'application/json';
+    $response['X-Powered-By'] = 'PHP 5, Slim Framework, OpenShift';
+
+    echo json_encode( $result );
+})
+
 $app->get('/', function() {
     ?>
     <!html><head><meta charset="utf-8"><title>FBaaS</title><body>
