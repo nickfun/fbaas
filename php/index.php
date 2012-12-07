@@ -48,7 +48,7 @@ $app->get('/fizzbuzzarray/:input+', function($input) use ($app) {
     $response['X-Powered-By'] = 'PHP 5, Slim Framework, OpenShift';
 
     echo json_encode( $result );
-})
+});
 
 $app->get('/', function() {
     ?>
@@ -56,7 +56,7 @@ $app->get('/', function() {
     <h1>FBaaS</h1>
     <p>Please review the specification for 
         <a href="https://github.com/tomjakubowski/fbaas">FizzBuzz as
-        a service</a>.
+        a service</a>.q
     </p></body></html>
     <?
 });
