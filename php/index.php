@@ -52,12 +52,13 @@ $app->get('/fizzbuzzarray/:input+', function($input) use ($app) {
 
 $app->get('/', function() {
     ?>
-    <!html><head><meta charset="utf-8"><title>FBaaS</title><body>
+    <!doctype html><html><head><meta charset="utf-8"><title>FBaaS</title><body>
     <h1>FBaaS</h1>
     <p>Please review the specification for 
         <a href="https://github.com/tomjakubowski/fbaas">FizzBuzz as
-        a service</a>.q
-    </p></body></html>
+        a service</a>.
+    </p>
+    <p><a href="/fizzbuzz/1,100">Or click here and you can figure it out</a></p></body></html>
     <?
 });
 
